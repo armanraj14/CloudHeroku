@@ -66,7 +66,7 @@ def decrypt(c):
     return int(m)
 
 @app.route("/sendData", methods=['GET'])
-def hello_worldpp():
+def sendData():
     args = request.args
     p=args.get("data")
     r=""
@@ -80,11 +80,11 @@ def hello_worldpp():
     return r
 
 @app.route("/")
-def hello_worldpppp():
+def welcomePage():
     return "<h1>Welcome to Cloud Service </h1><p>/sendData?data= to save a data and /getData?data= to fetch a data</p>"
 
 @app.route("/getData", methods=['GET'])
-def hello_worldppp():
+def getData():
     args = request.args
     p=args.get("data")
     r = ""
