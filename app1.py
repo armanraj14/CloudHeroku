@@ -15,7 +15,7 @@ def gcd(a, h):
 def encrypt(msg):
     p = 3
     q = 7
-    n = p*q
+    n = p*q+5
     e = 2
     phi = (p-1)*(q-1)
 
@@ -44,7 +44,7 @@ def encrypt(msg):
 def decrypt(c):
     p = 3
     q = 7
-    n = p*q
+    n = p*q+5
     e = 2
     phi = (p-1)*(q-1)
 
@@ -77,7 +77,7 @@ def sendData():
         print (q)
         print("..")
         r=r+q
-    return r
+    return "The data is saved as </p>" + r
 
 @app.route("/")
 def welcomePage():
@@ -95,7 +95,7 @@ def getData():
         print (q)
         print("..")
         r=r+q
-    return r
+    return "The data after decrypting is fetched as "+r
 
 # main driver function
 if __name__ == "__main__":
