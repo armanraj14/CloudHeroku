@@ -95,7 +95,7 @@ def getData():
         print (q)
         print("..")
         r=r+q
-    return "The data after decrypting is fetched as "+r
+    return "The data after decrypting is fetched as </p>"+r
 
 # main driver function
 if __name__ == "__main__":
